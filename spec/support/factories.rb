@@ -7,4 +7,9 @@ FactoryGirl.define do
     password_confirmation 'password'
   end
 
+  factory :game do
+    title "Spooky Haus"
+    price 19.99
+  end
+
 end

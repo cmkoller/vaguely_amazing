@@ -3,15 +3,13 @@
   <%= CartManager.new(session[:cart_id]).purchase?(@game) ? "Purchased" : "$#{@game.price}" %>
 </p>
 
-<% if signed_in? %>
-  <% if CartManager.new(session[:cart_id]).purchase? @game %>
-    <h1><a href="#">You have purchased this game! Yay</a></h1>
-  <% else %>
-    <% @cart_action = @game.cart_action(session[:cart_id])%>
-    <%= link_to "", class: "button", data: {target: @cart_action, addUrl: add_to_cart_path(@game), removeUrl: remove_from_cart_path(@game)} do %>
-      <i class="fi-shopping-cart"></i>
-      <span><%= @cart_action %></span> Cart
-    <% end %>
+<% if CartManager.new(session[:cart_id]).purchase? @game %>
+  <h1><a href="#">You have purchased this game! Yay</a></h1>
+<% else %>
+  <% @cart_action = @game.cart_action(session[:cart_id])%>
+  <%= link_to "", class: "button", data: {target: @cart_action, addUrl: add_to_cart_path(@game), removeUrl: remove_from_cart_path(@game)} do %>
+    <i class="fi-shopping-cart"></i>
+    <span><%= @cart_action %></span> Cart
   <% end %>
 <% end %>
 

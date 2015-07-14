@@ -7,7 +7,7 @@ require 'spec_helper'
 require 'rspec/rails'
 require 'shoulda-matchers'
 require File.join(File.dirname(__FILE__), 'support/valid_attribute')
-require File.join(File.dirname(__FILE__), 'support/factory_girl')
+require File.join(File.dirname(__FILE__), 'support/factories')
 require 'capybara/rspec'
 # Add additional requires below this line. Rails is not loaded until this point!
 
@@ -53,4 +53,13 @@ RSpec.configure do |config|
   # The different available types are documented in the features, such as in
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
+end
+
+def sign_in_as(user)
+  visit root_path
+  click_link "Sign In"
+
+  fill_in 'Email', with: user.email
+  fill_in 'Password', with: user.password
+  click_button 'Log in'
 end
