@@ -17,13 +17,14 @@
 
     <section class="top-bar-section">
       <ul class="right">
+
         <%- if current_user -%>
           <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
           <li>
             <%= link_to cart_path do%>
               <i class="fi-shopping-cart"></i>
               My Cart
-              (<span class="cart-count"><%=current_user.cart_count%></span>)
+              (<span class="cart-count"><%=CartManager.new(session[:cart_id]).cart_count %></span>)
             <%end%>
           </li>
         <%- else -%>

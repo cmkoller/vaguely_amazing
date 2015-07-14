@@ -7,11 +7,13 @@ class TransactionsController < ApplicationController
   end
 
   def create
+    @email = params[:email]
     @result = Braintree::Transaction.sale(
-              amount: current_user.cart_total_price,
+              amount: CartManager.new(session[:cart_id]).cart_total_price,
               payment_method_nonce: params[:payment_method_nonce])
     if @result.success?
-      current_user.purchase_cart_games!
+      session[:game_ids] ||= []
+      session[:game_ids] += CartManager.new(session[:cart_id]).purchase_cart_games!
       redirect_to root_url, notice: "Congraulations! Your transaction has been successfully!"
     else
       flash[:alert] = "Something went wrong while processing your transaction. Please try again!"
@@ -23,7 +25,7 @@ class TransactionsController < ApplicationController
   private
 
   def check_cart!
-    if current_user.get_cart_games.blank?
+    if CartManager.new(session[:cart_id]).get_cart_games.blank?
       redirect_to root_url, alert: "Please add some items to your cart before processing your transaction!"
     end
   end

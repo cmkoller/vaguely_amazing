@@ -2,23 +2,24 @@ class CartsController < ApplicationController
   before_action :authenticate_user!
 
   def show
-    cart_ids = $redis.smembers current_user_cart
+    cart_ids = $redis.smembers current_cart
     @cart_games = Game.find(cart_ids)
   end
 
   def add
-    $redis.sadd current_user_cart, params[:movie_id]
-    render json: current_user.cart_count, status: 200
+    $redis.sadd current_cart, params[:movie_id]
+    render json: CartManager.new(session[:cart_id]).cart_count, status: 200
   end
 
   def remove
-    $redis.srem current_user_cart, params[:movie_id]
-    render json: current_user.cart_count, status: 200
+    $redis.srem current_cart, params[:movie_id]
+    render json: CartManager.new(session[:cart_id]).cart_count, status: 200
   end
 
   private
 
-  def current_user_cart
-    "cart#{current_user.id}"
+  def current_cart
+    session[:cart_id] ||= "#{Time.now.to_i}#{rand(100)}"
+    "cart#{session[:cart_id]}"
   end
  end

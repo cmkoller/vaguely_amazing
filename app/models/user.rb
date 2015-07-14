@@ -7,31 +7,15 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  def cart_count
-    $redis.scard "cart#{id}"
-  end
-
-  def cart_total_price
-    total_price = 0
-    get_cart_games.each { |game| total_price+= game.price }
-    total_price
-  end
-
-  def get_cart_games
-    cart_ids = $redis.smembers "cart#{id}"
-    Game.find(cart_ids)
-  end
-
-  def purchase_cart_games!
-    get_cart_games.each { |game| purchase(game) }
-    $redis.del "cart#{id}"
-  end
-
-  def purchase(game)
-    games << game unless purchase?(game)
-  end
-
-  def purchase?(game)
-    games.include?(game)
-  end
+  # def self.build_for_views(id)
+  #   if id.present?
+  #     find_by(id: id)
+  #   else
+  #     Guest.new
+  #   end
+  # end
+  #
+  # def guest?
+  #   false
+  # end
 end
