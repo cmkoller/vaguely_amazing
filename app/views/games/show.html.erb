@@ -1,2 +1,18 @@
 <h1><%= @game.title %></h1>
-<h4><%= @game.price %></h4>
+<p class="label game-label radius mb1">
+  <%= (current_user && current_user.purchase?(@game)) ? "Purchased" : "$#{@game.price}" %>
+</p>
+
+<% if signed_in? %>
+  <% if current_user.purchase? @game %>
+    <h1><a href="#">You have purchased this game! Yay</a></h1>
+  <% else %>
+    <% @cart_action = @game.cart_action current_user.try :id%>
+    <%= link_to "", class: "button", data: {target: @cart_action, addUrl: add_to_cart_path(@game), removeUrl: remove_from_cart_path(@game)} do %>
+      <i class="fi-shopping-cart"></i>
+      <span><%= @cart_action %></span> Cart
+    <% end %>
+  <% end %>
+<% end %>
+
+<%=link_to "Checkout", new_transaction_path, class: "button" unless current_user.get_cart_games.blank?%>
