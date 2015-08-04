@@ -1,3 +1,7 @@
+<% if current_user.try(:admin?) %>
+  <%= link_to "Edit", edit_admin_game_path(@game) %>
+<% end %>
+
 <h1><%= @game.title %></h1>
 <p class="label game-label radius mb1">
   <%= CartManager.new(session[:cart_id]).purchase?(@game) ? "Purchased" : "$#{@game.price}" %>

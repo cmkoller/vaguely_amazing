@@ -11,6 +11,11 @@ Rails.application.routes.draw do
   end
 
   resources :transactions, only: [:new, :create]
+
+  namespace :admin do
+    resources :games, only: [:edit, :update]
+
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
