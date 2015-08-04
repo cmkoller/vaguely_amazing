@@ -21,5 +21,5 @@
   </div>
   <%end%>
 
-  <%=link_to "Checkout", new_transaction_path, class: "button" unless CartManager.new(session[:cart_id]).get_cart_games.blank?%>
+  <%=link_to "Checkout", new_transaction_path, class: "button" unless CartManager.new(session[:cart_id]).get_games.blank?%>
 </div>

@@ -13,7 +13,8 @@ class TransactionsController < ApplicationController
     if @result.success?
       session[:game_ids] ||= []
       session[:game_ids] += CartManager.new(session[:cart_id]).purchase_cart_games!
-      redirect_to root_url, notice: "Congraulations! Your transaction has been successfully!"
+      send_email
+      redirect_to root_url, notice: "Congratulations! Your transaction has been successfully!"
     else
       flash[:alert] = "Something went wrong while processing your transaction. Please try again!"
       gon.client_token = generate_client_token
@@ -23,8 +24,12 @@ class TransactionsController < ApplicationController
 
   private
 
+  def send_email
+    PurchaseMailer.new_purchase(session[:game_ids], @email).deliver_later
+  end
+
   def check_cart!
-    if CartManager.new(session[:cart_id]).get_cart_games.blank?
+    if CartManager.new(session[:cart_id]).get_games.blank?
       redirect_to root_url, alert: "Please add some items to your cart before processing your transaction!"
     end
   end

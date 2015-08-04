@@ -9,20 +9,23 @@ class CartManager
 
   def cart_total_price
     total_price = 0
-    get_cart_games.each { |game| total_price+= game.price }
+    get_games.each { |game| total_price+= game.price }
     total_price
   end
 
-  def get_cart_games
-    cart_ids = $redis.smembers @cart_id
-    Game.find(cart_ids)
+  def get_game_ids
+    $redis.smembers @cart_id
+  end
+
+  def get_games
+    Game.find(get_game_ids)
   end
 
   def purchase_cart_games!
-    game_ids = get_cart_games.pluck[:id]
-    get_cart_games.each { |game| purchase(game) }
+    ids = get_game_ids
+    get_games.each { |game| purchase(game) }
     $redis.del @cart_id
-    game_ids
+    ids
   end
 
   def purchase(game)

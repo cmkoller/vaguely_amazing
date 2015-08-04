@@ -1,0 +1,8 @@
+Hello <%= @email %>,
+
+You've bought the following games:
+
+<% @game_ids.each do |id| %>
+- <%= Game.find(id).title %>
+<% end %>
+Peace!
