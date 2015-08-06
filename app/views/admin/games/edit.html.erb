@@ -1,12 +1,17 @@
 <h1>Edit <%= @game.title %></h1>
 
 <%= form_for [:admin, @game] do |f| %>
+  <%= f.label :featured_image %>
+  <%= f.file_field :featured_image %>
+
+
   <%= f.label :title %>
   <%= f.text_field :title %>
 
   <%= f.label :price %>
   <%= f.number_field :price, :class => 'text_field', :step => :any %>
 
+  <%= f.label :file %>
   <%= f.file_field :file %>
 
   <%= f.submit "Update Game", class: "button" %>

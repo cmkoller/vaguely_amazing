@@ -6,6 +6,7 @@ class Game < ActiveRecord::Base
   validates :price, presence: true
 
   mount_uploader :file, GameFileUploader
+  mount_uploader :featured_image, GameFeaturedImageUploader
 
   def cart_action(current_cart_id)
     if $redis.sismember "cart#{current_cart_id}", id

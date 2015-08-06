@@ -20,7 +20,7 @@ module Admin
     protected
 
     def game_params
-      params.require(:game).permit(:title, :price, :file)
+      params.require(:game).permit(:title, :price, :file, :featured_image)
     end
   end
 end

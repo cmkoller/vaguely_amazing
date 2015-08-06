@@ -3,6 +3,9 @@
 <% end %>
 
 <h1><%= @game.title %></h1>
+
+<%= image_tag @game.featured_image.url %>
+
 <p class="label game-label radius mb1">
   <%= CartManager.new(session[:cart_id]).purchase?(@game) ? "Purchased" : "$#{@game.price}" %>
 </p>
