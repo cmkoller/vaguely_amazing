@@ -7,5 +7,7 @@
   <%= f.label :price %>
   <%= f.number_field :price, :class => 'text_field', :step => :any %>
 
+  <%= f.file_field :file %>
+
   <%= f.submit "Update Game", class: "button" %>
 <% end %>

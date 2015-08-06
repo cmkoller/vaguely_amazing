@@ -16,6 +16,8 @@ gem 'foundation-rails'
 gem 'braintree', '~> 2.33.1'
 gem 'figaro', '~> 0.7.0'
 gem 'gon', '~> 5.1.2'
+gem 'carrierwave'
+gem 'carrierwave-aws'
 
 group :development, :test do
   gem 'pry-rails'
@@ -27,4 +29,5 @@ group :development, :test do
   gem 'factory_girl'
   gem 'valid_attribute'
   gem 'shoulda-matchers', require: false
+  gem 'dotenv-rails'
 end
