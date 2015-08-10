@@ -41,7 +41,7 @@ feature "Admin Edits Game" do
     scenario "user cannot visit edit path" do
       game = FactoryGirl.create(:game)
       visit edit_admin_game_path(game)
-      expect(page).to have_content("You are not authorized to view this resource.")
+      expect(page).to have_content("You are not authorized to do that.")
       expect(page).to_not have_content("Edit #{game.title}")
     end
   end

@@ -16,4 +16,10 @@ FactoryGirl.define do
     price 19.99
   end
 
+  factory :post do
+    title "How to Design Good Games"
+    body "Here is a nice long blog post on how to design good games."
+    association :author, factory: :user
+  end
+
 end
