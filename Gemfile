@@ -18,6 +18,8 @@ gem 'figaro', '~> 0.7.0'
 gem 'gon', '~> 5.1.2'
 gem 'carrierwave'
 gem 'carrierwave-aws'
+gem 'mini_magick'
+gem 'redactor-rails'
 
 group :development, :test do
   gem 'pry-rails'

@@ -41,7 +41,9 @@
     </div>
   <%- end -%>
 
-  <%= yield %>
+  <div class="row">
+    <%= yield %>
+  </div>
 
   <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
   <%= javascript_include_tag 'application' %>

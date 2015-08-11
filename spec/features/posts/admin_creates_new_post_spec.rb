@@ -9,7 +9,7 @@ feature "Admin Creates New Post" do
       visit new_admin_post_path
       fill_in "Title", with: "How to design awesome games"
       fill_in "Body", with: "Here's how to do it"
-      click_button "Create Post"
+      click_button "Submit"
 
       expect(page).to have_content("Post created!")
       expect(page).to have_content("How to design awesome games")

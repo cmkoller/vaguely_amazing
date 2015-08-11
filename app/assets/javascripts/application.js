@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
+//= require redactor-rails
+//= require redactor-rails/plugins
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
