@@ -1,0 +1,8 @@
+.form-container.radius-box.glassy-bg.small-10.small-centered.medium-8.large-6.columns
+  %h2.mbs New Transaction
+  = form_tag transactions_path do
+    = label_tag(:email, "Email:")
+    = text_field_tag(:email)
+    %p Please enter your payment details:
+    #dropin
+    = submit_tag "Pay #{CartManager.new(session[:cart_id]).cart_total_price}$", class: "button mt1"

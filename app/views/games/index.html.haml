@@ -1,0 +1,9 @@
+%h1 Games
+- @games.each do |game|
+  %h4= link_to game.title, game_path(game)
+  - if signed_in?
+    - @cart_action = game.cart_action(session[:cart_id])
+    = link_to "", class: "button", data: {target: @cart_action, addUrl: add_to_cart_path(game), removeUrl: remove_from_cart_path(game)} do
+      %i.fi-shopping-cart
+      %span= @cart_action
+      Cart
