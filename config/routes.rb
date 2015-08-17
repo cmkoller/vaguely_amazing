@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   mount RedactorRails::Engine => '/redactor_rails'
   devise_for :users
 
-  root 'games#index'
+  root 'homes#index'
 
   resources :games, only: [:index, :show]
   resources :transactions, only: [:new, :create]

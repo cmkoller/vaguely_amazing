@@ -7,30 +7,14 @@
     = stylesheet_link_tag 'application', media: 'all'
     = csrf_meta_tags
   %body
-    %nav.top-bar
-      %ul.title-area
-        %li.name
-          %h1
-            %a{:href => "/"} GameApp
-      %section.top-bar-section
-        %ul.right
-          - if current_user
-            %li= link_to 'Sign Out', destroy_user_session_path, method: :delete
-          - else
-            %li= link_to 'Sign Up', new_user_registration_path
-            %li= link_to 'Sign In', new_user_session_path
-          %li
-            = link_to cart_path do
-              %i.fi-shopping-cart
-              My Cart
-              (
-              %span.cart-count>= CartManager.new(session[:cart_id]).cart_count
-              )
+    = render "layouts/header"
+
     - flash.each do |key, value|
       %div{:class => "flash flash-#{key}"}
         = value
-    .row
-      = yield
+
+    = yield
+
     %script{:src => "https://js.braintreegateway.com/v2/braintree.js"}
     = javascript_include_tag 'application'
     = yield :extra_footer
