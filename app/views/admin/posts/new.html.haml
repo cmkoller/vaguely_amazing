@@ -1,2 +1,8 @@
-%h1 New Post
-= render "form"
+.row.ptl
+  %ul.breadcrumbs
+    %li= link_to "Admin Dashboard", "/admin"
+    %li= link_to "Posts", admin_posts_path
+    %li.current= link_to "New Post", new_admin_post_path
+
+  %h1 New Post
+  = render "form"

@@ -1,0 +1,14 @@
+.row.ptl
+  %ul.breadcrumbs
+    %li= link_to "Admin Dashboard", "/admin"
+    %li.current= link_to "Games", admin_games_path
+
+  = link_to "New Game", new_admin_game_path, class: "button right"
+
+  %h1 Games
+
+  %table
+    - @games.each do |game|
+      %tr
+        %td= game.title
+        %td= link_to "Edit", edit_admin_game_path(game), class: "button tiny"

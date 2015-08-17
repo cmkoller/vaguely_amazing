@@ -14,8 +14,9 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    resources :games, only: [:edit, :update]
-    resources :posts, only: [:new, :create, :edit, :update]
+    resources :games, only: [:index, :new, :create, :edit, :update]
+    resources :posts, only: [:index, :new, :create, :edit, :update]
+    get "/" => "dashboards#index"
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

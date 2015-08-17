@@ -1,17 +1,21 @@
-- if current_user.try(:admin?)
-  = link_to "Edit", edit_admin_game_path(@game)
-%h1= @game.title
-= image_tag @game.featured_image.url
-%p.label.game-label.radius.mb1
-  = CartManager.new(session[:cart_id]).purchase?(@game) ? "Purchased" : "$#{@game.price}"
-- if CartManager.new(session[:cart_id]).purchase? @game
-  %h1
-    %a{:href => "#"} You have purchased this game! Yay
-- else
-  - @cart_action = @game.cart_action(session[:cart_id])
-  = link_to "", class: "button", data: {target: @cart_action, addUrl: add_to_cart_path(@game), removeUrl: remove_from_cart_path(@game)} do
-    %i.fi-shopping-cart
-    %span= @cart_action
-    Cart
-= link_to "Checkout", new_transaction_path, class: "button" unless CartManager.new(session[:cart_id]).get_games.blank?
-= link_to "PDF", @game.file.url
+.row.ptl
+  - if current_user.try(:admin?)
+    = link_to "Edit", edit_admin_game_path(@game)
+
+  %h1= @game.title
+
+  = image_tag @game.featured_image.url
+
+  %p.label.game-label.radius.mb1
+    = CartManager.new(session[:cart_id]).purchase?(@game) ? "Purchased" : "$#{@game.price}"
+  - if CartManager.new(session[:cart_id]).purchase? @game
+    %h1
+      %a{:href => "#"} You have purchased this game! Yay
+  - else
+    - @cart_action = @game.cart_action(session[:cart_id])
+    = link_to "", class: "button", data: {target: @cart_action, addUrl: add_to_cart_path(@game), removeUrl: remove_from_cart_path(@game)} do
+      %i.fi-shopping-cart
+      %span= @cart_action
+      Cart
+  = link_to "Checkout", new_transaction_path, class: "button" unless CartManager.new(session[:cart_id]).get_games.blank?
+  = link_to "PDF", @game.file.url

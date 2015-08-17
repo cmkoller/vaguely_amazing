@@ -1,6 +1,11 @@
 module Admin
   class PostsController < ApplicationController
     before_action :authorize_admin!
+
+    def index
+      @posts = Post.all
+    end
+
     def new
       @post = Post.new
     end

@@ -1,0 +1,14 @@
+.row.ptl
+  %ul.breadcrumbs
+    %li= link_to "Admin Dashboard", "/admin"
+    %li.current= link_to "Blog Posts", admin_posts_path
+
+  = link_to "New Post", new_admin_post_path, class: "button right"
+  %h1 Blog Posts
+
+  %table
+    - @posts.each do |post|
+      %tr
+        %td= post.title
+        %td= post.author.username
+        %td= link_to "Edit", edit_admin_post_path(post), class: "button tiny"
