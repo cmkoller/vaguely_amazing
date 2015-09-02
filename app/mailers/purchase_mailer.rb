@@ -9,7 +9,7 @@ class PurchaseMailer < ApplicationMailer
     @email = email
     mail(
       to: @email,
-      subject: "New Purchase from TODO GAME APP"
+      subject: "New Purchase from VaguelyAmazing"
     )
   end
 end

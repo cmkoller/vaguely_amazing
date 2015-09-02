@@ -13,6 +13,9 @@ Rails.application.routes.draw do
     put 'remove/:movie_id', to: 'carts#remove', as: :remove_from
   end
 
+  resources :contact_messages, only: [:new, :create]
+  get "/contact" => "contact_messages#new"
+
   namespace :admin do
     resources :games, only: [:index, :new, :create, :edit, :update]
     resources :posts, only: [:index, :new, :create, :edit, :update]

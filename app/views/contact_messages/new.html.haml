@@ -1,0 +1,11 @@
+.row
+  %h1 Contact Us
+
+  = form_for @message do |f|
+    = f.label :email
+    = f.text_field :email
+
+    = f.label :body, "Message"
+    = f.text_area :body
+
+    = f.submit "Get in touch!", class: "button"
