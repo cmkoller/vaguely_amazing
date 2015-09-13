@@ -8,3 +8,13 @@
     background-color: transparentize($white, .7);
   }
 }
+
+.button-green {
+  @extend .button;
+
+  background-color: $green;
+
+  &:hover, &:focus {
+    background-color: darken($green, 10%);
+  }
+}

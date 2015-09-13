@@ -1,6 +1,6 @@
 .game-slider-section {
   background-color: $tomato;
-  padding: 3em;
+  padding: 2em;
 }
 
 .toss-text {
@@ -14,4 +14,38 @@
 
 .toss-cup {
   text-align: center;
+}
+
+.email-sign-up-section {
+  @extend .clearfix;
+  background-color: $primary-color;
+  padding: 50px;
+
+  &, h4 {
+    color: $white;
+  }
+
+  input[type="email"] {
+    box-shadow: none;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    padding: 14px;
+    height: auto;
+    font-size: 1.1em;
+
+  }
+
+  ::-webkit-input-placeholder {
+     color: rgba(255,255,255,.5);
+  }
+  :-moz-placeholder { /* Firefox 18- */
+     color: rgba(255,255,255,.5);
+  }
+  ::-moz-placeholder {  /* Firefox 19+ */
+     color: rgba(255,255,255,.5);
+  }
+  :-ms-input-placeholder {
+     color: rgba(255,255,255,.5);
+  }
 }
