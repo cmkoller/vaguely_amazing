@@ -1,0 +1,23 @@
+.toss-game.clearfix
+  .row
+    .small-4.columns
+      = image_tag "cup.png"
+
+    .small-8.columns
+      .columns
+        = image_tag "toss.png"
+
+        %h3 What is T.o.S.S.?
+
+        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit purus in viverra sodales. Sed vulputate urna justo, ut viverra felis imperdiet vitae. Proin maximus est eros, sit amet cursus nisi luctus a. Fusce quis mauris id lectus semper molestie. Donec ultrices risus risus, quis lacinia velit auctor ut. Donec vitae consectetur est, non laoreet urna. Vestibulum elementum accumsan leo, eu euismod arcu pulvinar ac.
+
+        .text-center
+          = link_to "View the Rules", "#", class: "button-white mrl"
+          = link_to "Download the Print-and-Play", "#", class: "button-white"
+
+      .columns
+        %h4 Sign up for news on the Kickstarter
+      = render "mailchimp_form"
+.feedback-section.clearfix
+  .row
+    %h1 Give us feedback!

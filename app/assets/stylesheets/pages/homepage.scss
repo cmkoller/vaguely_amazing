@@ -24,28 +24,4 @@
   &, h4 {
     color: $white;
   }
-
-  input[type="email"] {
-    box-shadow: none;
-    border: 2px solid white;
-    background-color: transparent;
-    color: white;
-    padding: 14px;
-    height: auto;
-    font-size: 1.1em;
-
-  }
-
-  ::-webkit-input-placeholder {
-     color: rgba(255,255,255,.5);
-  }
-  :-moz-placeholder { /* Firefox 18- */
-     color: rgba(255,255,255,.5);
-  }
-  ::-moz-placeholder {  /* Firefox 19+ */
-     color: rgba(255,255,255,.5);
-  }
-  :-ms-input-placeholder {
-     color: rgba(255,255,255,.5);
-  }
 }
