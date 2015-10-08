@@ -17,7 +17,7 @@
         %p For now, you can print and play our latest Playtest Edition for free! Just download and print all the files, read the rules, gather your friends, and enjoy - and don't forget to leave us your feedback!
 
         .text-center
-          = link_to "View the Rules", "/Toss_Rulebook.pdf", class: "button-white mrl"
+          = link_to "View the Rules", Game.first.file.url, class: "button-white mrl"
           = link_to "Download the Print-and-Play", "/ToSS_PrintnPlay_(October_Edition).zip", class: "button-white"
 
       .columns
