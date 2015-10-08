@@ -7,5 +7,7 @@
             = image_tag "va-title.png", alt: "Vaguely Amazing"
     %section.top-bar-section
       %ul.right
-        %li= link_to 'Play Toss', "#"
-        %li= link_to 'Give us Feedback', "#"
+        %li= link_to 'Play Toss', toss_path
+        %li= link_to 'Give us Feedback', "/toss#feedback-section"
+        - if current_user.present?
+          %li= link_to 'Sign Out', destroy_user_session_path, method: :delete

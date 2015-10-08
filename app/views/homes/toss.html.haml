@@ -12,15 +12,20 @@
 
         %h3 What is T.o.S.S.?
 
-        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit purus in viverra sodales. Sed vulputate urna justo, ut viverra felis imperdiet vitae. Proin maximus est eros, sit amet cursus nisi luctus a. Fusce quis mauris id lectus semper molestie. Donec ultrices risus risus, quis lacinia velit auctor ut. Donec vitae consectetur est, non laoreet urna. Vestibulum elementum accumsan leo, eu euismod arcu pulvinar ac.
+        %p This will be so descriptive and wonderful, once we have our actual site release. In the meantime, just download the game!
+
+        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit purus in viverra sodales. Sed vulputate urna justo, ut viverra felis imperdiet vitae. Proin maximus est eros, sit amet cursus nisi luctus a. Fusce quis mauris id lectus semper molestie. Donec ultrices risus risus, quis lacinia velit auctor ut.
 
         .text-center
-          = link_to "View the Rules", "#", class: "button-white mrl"
-          = link_to "Download the Print-and-Play", "#", class: "button-white"
+          = link_to "View the Rules", "/Toss_Rulebook.pdf", class: "button-white mrl"
+          = link_to "Download the Print-and-Play", "/ToSS_PrintnPlay_(October_Edition).zip", class: "button-white"
 
       .columns
         %h4 Sign up for news on the Kickstarter
-      = render "mailchimp_form"
-.feedback-section.clearfix
+      = render "homes/mailchimp_form"
+
+#feedback-section.clearfix
   .row
     %h1 Give us feedback!
+
+    = render "homes/feedback_form"
