@@ -1,0 +1,123 @@
+= form_for @feedback do |f|
+  .row
+    .medium-6.columns
+      = f.label :name, "Name (optional)"
+      = f.text_field :name
+
+    .medium-6.columns
+      = f.label :email, "Email (optional)"
+      = f.text_field :email
+
+  %br
+
+  %h5 How did you feel about these different aspects of the game?
+  %h6.small Check any and all boxes that describe your experience:
+
+  %table
+    %tr
+      %th
+      %th Frustrating
+      %th Fun
+      %th Too Simple
+      %th Too Complex
+      %th Logical
+      %th Appealing (makes me want to play again)
+      %th Unappealing (makes me not want to play again)
+    %tr
+      %th Encounters and Difficulty
+      %td
+        .fancy-checkbox
+          = f.check_box :encounters_frustrating
+      %td
+        .fancy-checkbox
+          = f.check_box :encounters_fun
+      %td
+        .fancy-checkbox
+          = f.check_box :encounters_simple
+      %td
+        .fancy-checkbox
+          = f.check_box :encounters_complex
+      %td
+        .fancy-checkbox
+          = f.check_box :encounters_logical
+      %td
+        .fancy-checkbox
+          = f.check_box :encounters_appealing
+      %td
+        .fancy-checkbox
+          = f.check_box :encounters_unappealing
+    %tr
+      %th Items
+      %td
+        .fancy-checkbox
+          = f.check_box :items_frustrating
+      %td
+        .fancy-checkbox
+          = f.check_box :items_fun
+      %td
+        .fancy-checkbox
+          = f.check_box :items_simple
+      %td
+        .fancy-checkbox
+          = f.check_box :items_complex
+      %td
+        .fancy-checkbox
+          = f.check_box :items_logical
+      %td
+        .fancy-checkbox
+          = f.check_box :items_appealing
+      %td
+        .fancy-checkbox
+          = f.check_box :items_unappealing
+    %tr
+      %th Classes and Leveling
+      %td
+        .fancy-checkbox
+          = f.check_box :classes_frustrating
+      %td
+        .fancy-checkbox
+          = f.check_box :classes_fun
+      %td
+        .fancy-checkbox
+          = f.check_box :classes_simple
+      %td
+        .fancy-checkbox
+          = f.check_box :classes_complex
+      %td
+        .fancy-checkbox
+          = f.check_box :classes_logical
+      %td
+        .fancy-checkbox
+          = f.check_box :classes_appealing
+      %td
+        .fancy-checkbox
+          = f.check_box :classes_unappealing
+    %tr
+      %th Cooperative Experience
+      %td
+        .fancy-checkbox
+          = f.check_box :cooperative_frustrating
+      %td
+        .fancy-checkbox
+          = f.check_box :cooperative_fun
+      %td
+        .fancy-checkbox
+          = f.check_box :cooperative_simple
+      %td
+        .fancy-checkbox
+          = f.check_box :cooperative_complex
+      %td
+        .fancy-checkbox
+          = f.check_box :cooperative_logical
+      %td
+        .fancy-checkbox
+          = f.check_box :cooperative_appealing
+      %td
+        .fancy-checkbox
+          = f.check_box :cooperative_unappealing
+
+
+  = f.label :other_feedback
+  = f.text_area :other_feedback
+
+  = f.submit "Submit", class: "button"

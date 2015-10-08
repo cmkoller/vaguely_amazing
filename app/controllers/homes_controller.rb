@@ -3,5 +3,6 @@ class HomesController < ApplicationController
   end
 
   def toss
+    @feedback = Feedback.new
   end
 end
