@@ -16,5 +16,4 @@
 /config/application.yml
 dump.rdb
 
-/public/uploads
 .env
