@@ -18,3 +18,13 @@
     background-color: darken($green, 10%);
   }
 }
+
+.button-dark-blue {
+  @extend .button;
+
+  background-color: #25537F;
+
+  &:hover, &:focus {
+    background-color: darken(#25537F, 10%);
+  }
+}

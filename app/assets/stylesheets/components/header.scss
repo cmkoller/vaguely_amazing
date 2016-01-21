@@ -1,5 +1,31 @@
-nav ul li h1 img {
-  height: 75px;
-  top: -3px;
-  position: relative;
+nav {
+  background-color: $tomato;
+  text-align: center;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+
+  ul {
+    margin: 0;
+  }
+
+  ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 20px;
+    margin-top: 10px;
+
+    &:first-child {
+      border-bottom: 2px solid white;
+    }
+  }
+
+  a {
+    color: white;
+  }
+
+}
+
+nav ~ * {
+  padding-top: 70px;
 }

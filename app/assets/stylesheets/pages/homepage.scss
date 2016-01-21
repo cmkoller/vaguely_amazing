@@ -1,10 +1,8 @@
 .game-slider-section {
   background-color: $tomato;
-  padding: 2em;
 }
 
 .toss-text {
-  margin-top: 1em;
   text-align: center;
 }
 
@@ -17,9 +15,6 @@
 }
 
 .email-sign-up-section {
-  @extend .clearfix;
-  background-color: $primary-color;
-  padding: 50px;
 
   &, h4 {
     color: $white;
