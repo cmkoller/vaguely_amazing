@@ -34,3 +34,5 @@ group :development, :test do
   gem 'shoulda-matchers', require: false
   gem 'dotenv-rails'
 end
+
+gem 'rails_12factor', group: :production
