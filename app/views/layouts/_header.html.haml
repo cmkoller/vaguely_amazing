@@ -1,7 +1,7 @@
-%nav
+%nav{class: "#{'home' if controller.action_name == 'index'}"}
   %ul
-    %li= link_to 'Home', toss_path
-    %li= link_to 'About Us', toss_path
+    %li{class: "#{'active' if controller.action_name == 'index'}"}= link_to 'Home', root_path
+    %li{class: "#{'active' if controller.action_name == 'about_us'}"}= link_to 'About Us', about_us_path
     %li= link_to 'Play Toss', toss_path
     %li= link_to 'Give us Feedback', "/toss#feedback-section"
     - if current_user.present?

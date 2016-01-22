@@ -1,12 +1,12 @@
 @font-face {
-  font-family: 'tokyo';
-  src: font-url('a-tokyo-pop-star.ttf'); /* IE9 Compat Modes */
+  font-family: 'rocker';
+  src: font-url('NewRocker.otf'); /* IE9 Compat Modes */
   font-weight: normal;
   font-style: normal;
 }
 
-// Import Oswald and Droid Sans
-@import url('//fonts.googleapis.com/css?family=Oswald:400,700|Droid+Sans:400,700');
+// Import Oswald and Droid Sans and Lato
+@import url('//fonts.googleapis.com/css?family=Lato:300|Droid+Sans:400,700|Oswald');
 
 .italic {
   font-style: italic;
