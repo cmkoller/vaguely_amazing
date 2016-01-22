@@ -1,9 +1,18 @@
 .game-slider-section {
   background-color: $tomato;
+  padding-bottom: 5px;
+  border-bottom: 5px solid hsla(13,87%,77%,1);
 }
 
 .toss-text {
   text-align: center;
+}
+
+.toss-subtitle {
+  font-family: 'rocker';
+  color: $almost-black;
+  font-size: 34px;
+  margin: 10px;
 }
 
 .toss-description {
@@ -14,13 +23,11 @@
   text-align: center;
 }
 
-.email-sign-up-section {
+.what-is-toss {
+  background-color: $primary-color;
+  padding: 30px 0;
 
-  &, h4 {
-    color: $white;
-  }
-
-  .email-box {
-    margin-top: 42px;
+  &, h1, h2, h3, h4, h5, h6 {
+    color: white;
   }
 }
