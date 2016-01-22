@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root 'homes#index'
 
   get "/toss" => "homes#toss"
+  get "/about-us" => "homes#about_us"
 
   resources :games, only: [:index, :show]
   resources :transactions, only: [:new, :create]

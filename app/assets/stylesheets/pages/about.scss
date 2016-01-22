@@ -1,0 +1,22 @@
+.about-us-section {
+  background-color: $green;
+
+  .nerd {
+    @extend .clearfix;
+    margin: 30px 0;
+
+    img {
+      width: 200px;
+      float: left;
+      border: 10px solid #0092B2;
+      margin: 0 21px 0 0;
+    }
+
+    .name {
+      color: white;
+      font-family: $header-font-family;
+      font-size: 40px;
+      line-height: 1em;
+    }
+  }
+}
