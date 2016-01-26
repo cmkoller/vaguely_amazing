@@ -19,10 +19,10 @@
   }
 }
 
-.button-dark-blue {
+.button-dark-border {
   @extend .button;
 
-  background-color: #25537F;
+  border: 3px solid #3F3B3C;
 
   &:hover, &:focus {
     background-color: darken(#25537F, 10%);

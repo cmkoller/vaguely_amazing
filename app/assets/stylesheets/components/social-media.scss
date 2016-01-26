@@ -1,0 +1,17 @@
+.social-media {
+  position: fixed;
+  right: 20px;
+  top: 14px;
+  z-index: 10;
+  list-style: none;
+  margin: 0;
+
+  li {
+    display: inline-block;
+    margin-left: 15px;
+  }
+
+  img {
+    width: 30px;
+  }
+}

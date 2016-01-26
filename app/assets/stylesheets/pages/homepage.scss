@@ -9,10 +9,18 @@
 }
 
 .toss-subtitle {
-  font-family: 'rocker';
+  font-family: 'ganz';
   color: $almost-black;
   font-size: 34px;
   margin: 10px;
+
+  span {
+    font-family: 'Deutsch';
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 34px;
+    margin-right: 2px;
+  }
 }
 
 .toss-description {

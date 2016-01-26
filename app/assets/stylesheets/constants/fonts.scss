@@ -1,4 +1,25 @@
 @font-face {
+  font-family: 'bionique';
+  src: font-url('bionique.ttf'); /* IE9 Compat Modes */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ganz';
+  src: font-url('ganz.ttf'); /* IE9 Compat Modes */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Deutsch';
+  src: font-url('Deutsch.ttf'); /* IE9 Compat Modes */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'rocker';
   src: font-url('NewRocker.otf'); /* IE9 Compat Modes */
   font-weight: normal;
@@ -10,4 +31,9 @@
 
 .italic {
   font-style: italic;
+}
+
+.toss-font {
+  font-family: 'Deutsch';
+  font-size: 1.2em;
 }
