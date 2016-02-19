@@ -5,4 +5,7 @@ class HomesController < ApplicationController
   def toss
     @feedback = Feedback.new
   end
+
+  def about_us
+  end
 end

@@ -1,23 +1,19 @@
-- title "Vaguely Amazing presents T.o.S.S. - Fantasy RPG Pong"
-- meta_description "TODO ADD META DESCRIPTION"
+- title "ToSS: Fantasy Pong Game - Vaguely Amazing"
 
 .game-slider-section.clearfix
-  .medium-6.medium-offset-1.columns
+  .medium-9.medium-centered.columns
     .toss-text
       = image_tag "toss.png"
+      %h4.toss-subtitle
+        <span>T</span>rials of <span>S</span>word and <span>S</span>taff
 
-      .toss-description Welcome! Click below to check out our latest playtest version of ToSS. Download the free Print & Play, and make sure to give us feedback!
-      = link_to "Play it Now", toss_path, class: "button-white round mtl"
 
-  .medium-4.end.columns
-    .toss-cup
-      = image_tag "cup.png"
+    .medium-6.columns
+      .toss-cup
+        = image_tag "cup2.jpg"
+    .medium-6.columns
+      .toss-description "ToSS: Trials of Sword and Staff" is a cooperative dexterity game in which your heroes fight to slay monsters and loot treasure by throwing ping pong balls into cups. Level as a warrior or a wizard, play a single scenario or take on a campaign.
+      .row.mtl
+        = render "mailchimp_form"
 
-.email-sign-up-section
-  .row
-    .medium-4.columns
-      .columns
-        %h4 Stay updated!
-        %p Sign up to get news on updates and our upcoming Kickstarter. We'll never spam you, we promise!
-    .medium-8.columns.email-box
-      = render "mailchimp_form"
+= render "what_is_toss"

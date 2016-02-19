@@ -8,6 +8,9 @@
       = f.label :email, "Email (optional)"
       = f.text_field :email
 
+  = f.label :other_feedback, "Comments (optional)"
+  = f.text_area :other_feedback
+
   %br
 
   %h5 How did you feel about these different aspects of the game?
@@ -115,9 +118,5 @@
       %td
         .fancy-checkbox
           = f.check_box :cooperative_unappealing
-
-
-  = f.label :other_feedback
-  = f.text_area :other_feedback
 
   = f.submit "Submit", class: "button"

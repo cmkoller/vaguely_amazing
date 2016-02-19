@@ -1,13 +1,18 @@
-%nav.top-bar
-  .row
-    %ul.title-area
-      %li.name
-        %h1
-          = link_to "/" do
-            = image_tag "va-title.png", alt: "Vaguely Amazing"
-    %section.top-bar-section
-      %ul.right
-        %li= link_to 'Play Toss', toss_path
-        %li= link_to 'Give us Feedback', "/toss#feedback-section"
-        - if current_user.present?
-          %li= link_to 'Sign Out', destroy_user_session_path, method: :delete
+%ul.social-media
+  %li
+    = link_to "#" do
+      = image_tag "twitter.png", alt: "Our Twitter Account"
+  %li
+    = link_to "#" do
+      = image_tag "facebook.png", alt: "Our Twitter Account"
+  %li
+    = link_to "#" do
+      = image_tag "instagram.png", alt: "Our Twitter Account"
+%nav{class: "#{'home' if controller.action_name == 'index'}"}
+  %ul
+    %li{class: "#{'active' if controller.action_name == 'index'}"}= link_to 'Home', root_path
+    %li{class: "#{'active' if controller.action_name == 'about_us'}"}= link_to 'About Us', about_us_path
+    %li{class: "#{'active' if params[:controller] == 'feedbacks'}"}= link_to 'Give Feedback', "/feedback"
+    %li{class: "#{'active' if params[:controller] == 'contact_messages'}"}= link_to 'Contact Us', contact_path
+    - if current_user.present?
+      %li= link_to 'Sign Out', destroy_user_session_path, method: :delete

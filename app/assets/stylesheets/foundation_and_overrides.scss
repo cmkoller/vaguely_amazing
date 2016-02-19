@@ -119,7 +119,8 @@ $white       : #FFFFFF;
 $bluegrey: #252729;
 $tomato: #F15E34;
 // $green: #77E339;
-$green: #A2E87A;
+$green: #97DF6D;
+$almost-black: #3F3B3C;
 
 // We use these as default colors throughout
 $primary-color: #0092B2;
@@ -131,8 +132,8 @@ $primary-color: #0092B2;
 
 // We use these to control various global styles
 // $body-bg: $white;
-// $body-font-color: $jet;
-$body-font-family: Droid Sans;
+$body-font-color: $almost-black;
+$body-font-family: Droid Sans, sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 
@@ -216,7 +217,7 @@ $body-font-family: Droid Sans;
 // $include-html-type-classes: $include-html-classes;
 
 // We use these to control header font styles
-$header-font-family: Oswald;
+$header-font-family: Oswald, sans-serif;
 // $header-font-weight: $font-weight-normal;
 // $header-font-style: normal;
 // $header-font-color: $jet;
@@ -647,22 +648,22 @@ $header-font-family: Oswald;
 // $form-label-font-size: rem-calc(14);
 // $form-label-font-weight: $font-weight-normal;
 // $form-label-line-height: 1.5;
-// $form-label-font-color: scale-color($black, $lightness: 30%);
+$form-label-font-color: black;
 // $form-label-small-transform: capitalize;
 // $form-label-bottom-margin: 0;
 // $input-font-family: inherit;
 // $input-font-color: rgba(0,0,0,0.75);
 // $input-font-size: rem-calc(14);
-// $input-bg-color: $white;
-// $input-focus-bg-color: scale-color($white, $lightness: -2%);
-// $input-border-color: scale-color($white, $lightness: -20%);
-// $input-focus-border-color: scale-color($white, $lightness: -40%);
+$input-bg-color: transparentize(white, 1);
+$input-focus-bg-color: transparentize(white, .8);
+$input-border-color: white;
+$input-focus-border-color: white;
 // $input-border-style: solid;
-// $input-border-width: 1px;
+$input-border-width: 3px;
 // $input-border-radius: $global-radius;
 // $input-disabled-bg: $gainsboro;
 // $input-disabled-cursor: $cursor-default-value;
-// $input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+$input-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
 // $input-include-glowing-effect: false;
 
 // We use these to style the fieldset border and spacing.

@@ -1,4 +1,8 @@
 class FeedbacksController < ApplicationController
+  def new
+    @feedback = Feedback.new
+  end
+
   def create
     @feedback = Feedback.new(feedback_params)
     if @feedback.save
@@ -39,7 +43,7 @@ class FeedbacksController < ApplicationController
       :classes_logical,
       :classes_appealing,
       :classes_unappealing,
-      
+
       :cooperative_frustrating,
       :cooperative_fun,
       :cooperative_simple,

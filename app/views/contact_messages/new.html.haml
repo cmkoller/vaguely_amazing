@@ -1,11 +1,13 @@
-.row
-  %h1 Contact Us
+.contact-us-section.main
+  .row
+    .medium-10.columns.medium-centered
+      %h1 Contact Us
 
-  = form_for @message do |f|
-    = f.label :email
-    = f.text_field :email
+      = form_for @message, html: { class: "light" } do |f|
+        = f.label :email
+        = f.text_field :email
 
-    = f.label :body, "Message"
-    = f.text_area :body
+        = f.label :body, "Message"
+        = f.text_area :body
 
-    = f.submit "Get in touch!", class: "button"
+        = f.submit "Get in touch!", class: "button-white"
