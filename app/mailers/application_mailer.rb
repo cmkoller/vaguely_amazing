@@ -1,3 +1,3 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "\"TODO GAME APP NAME\" <no-reply@example.com>"
+  default from: "\"Toss Kickstarter\" <contact@playtoss.net>"
 end
