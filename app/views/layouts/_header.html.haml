@@ -1,13 +1,13 @@
 %ul.social-media
   %li
-    = link_to "#" do
+    = link_to "https://twitter.com/TossKickstarter", { target: "_blank" } do
       = image_tag "twitter.png", alt: "Our Twitter Account"
   %li
-    = link_to "#" do
+    = link_to "https://www.facebook.com/vaguelyamazing", { target: "_blank" } do
       = image_tag "facebook.png", alt: "Our Twitter Account"
-  %li
-    = link_to "#" do
-      = image_tag "instagram.png", alt: "Our Twitter Account"
+  -# %li
+  -#   = link_to "#" do
+  -#     = image_tag "instagram.png", alt: "Our Twitter Account"
 %nav{class: "#{'home' if controller.action_name == 'index'}"}
   %ul
     %li{class: "#{'active' if controller.action_name == 'index'}"}= link_to 'Home', root_path
