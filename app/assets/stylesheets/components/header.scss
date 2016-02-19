@@ -50,3 +50,17 @@ nav {
 nav ~ *:nth-child(3) {
   padding-top: 80px;
 }
+
+@media #{$small-only} {
+  nav {
+    top: 30px;
+
+    ul li {
+      margin: 10px;
+    }
+  }
+
+  nav ~ *:nth-child(3) {
+    padding-top: 110px;
+  }
+}

@@ -1,10 +1,11 @@
 .social-media {
   position: fixed;
   right: 20px;
-  top: 14px;
+  padding-top: 14px;
   z-index: 10;
   list-style: none;
   margin: 0;
+  background-color: $tomato;
 
   li {
     display: inline-block;
@@ -13,5 +14,12 @@
 
   img {
     width: 30px;
+  }
+
+  @media #{$small-only} {
+    width: 100%;
+    right: auto;
+    padding-top: 6px;
+    text-align: center;
   }
 }
