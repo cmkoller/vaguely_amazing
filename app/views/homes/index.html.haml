@@ -1,21 +1,21 @@
 - title "ToSS: Fantasy Pong Game - Vaguely Amazing"
+- content_for :body_class, "red-body"
 
-.game-slider-section.clearfix
-  .medium-9.medium-centered.columns
-    .toss-text
-      = image_tag "toss.png"
-      %h4.toss-subtitle
-        <span>T</span>rials of <span>S</span>word and <span>S</span>taff
+.medium-9.medium-centered.columns
+  .toss-text
+    = image_tag "toss.png"
+    %h4.toss-subtitle
+      <span>T</span>rials of <span>S</span>word and <span>S</span>taff
 
 
-    .medium-6.columns
-      .toss-cup
-        = image_tag "toss-cup.png"
-    .medium-6.columns
-      .toss-description
-        %p "ToSS: Trials of Sword and Staff" is a cooperative dexterity game in which your heroes fight to slay monsters and loot treasure by throwing ping pong balls into cups. Level as a warrior or a wizard, play a single scenario or take on a campaign.
-        %p We'll be launching our Kickstarter in May! Sign up for our mailing list to stay updated.
-      .row.mtl
-        = render "mailchimp_form"
+  .medium-6.columns
+    .toss-cup
+      = image_tag "toss-cup.png"
+  .medium-6.columns
+    .toss-description
+      %p "ToSS: Trials of Sword and Staff" is a cooperative dexterity game in which your heroes fight to slay monsters and loot treasure by throwing ping pong balls into cups. Level as a warrior or a wizard, play a single scenario or take on a campaign.
+      %p We'll be launching our Kickstarter in May! Sign up for our mailing list to stay updated.
+    .row.mtl
+      = render "mailchimp_form"
 
 -# = render "what_is_toss"

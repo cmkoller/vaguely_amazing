@@ -10,11 +10,12 @@
     = csrf_meta_tags
     = render "layouts/favicon"
   %body
-    -# = render "layouts/flash"
-    = render "layouts/header"
-    = render "layouts/flash"
+    .main{ class: "#{yield(:body_class)}"}
+      -# = render "layouts/flash"
+      = render "layouts/header"
+      = render "layouts/flash"
 
-    = yield
+      = yield
 
     = render "layouts/footer"
 

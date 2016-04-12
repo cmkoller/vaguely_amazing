@@ -1,7 +1,24 @@
 body {
   min-height: 100vh;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.red-body {
+  background-color: $tomato;
+  border-bottom: 5px solid hsla(13,87%,77%,1);
+}
+
+.green-body {
+  background-color: $green;
+}
+
+.blue-body {
+  background-color: $primary-color;
 }
 
 .main {
-  min-height: 100%;
+  flex: 1 0 auto;
+  padding-bottom: 5px;
 }
