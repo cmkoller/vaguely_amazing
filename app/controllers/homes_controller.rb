@@ -8,4 +8,7 @@ class HomesController < ApplicationController
 
   def about_us
   end
+
+  def press_kit
+  end
 end

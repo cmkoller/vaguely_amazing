@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get "/toss" => "homes#toss"
   get "/about-us" => "homes#about_us"
   get "/feedback" => "feedbacks#new"
+  get "/press-kit" => "homes#press_kit"
 
   resources :games, only: [:index, :show]
   resources :transactions, only: [:new, :create]
