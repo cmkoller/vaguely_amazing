@@ -15,6 +15,7 @@
 //= require foundation
 //= require redactor-rails
 //= require redactor-rails/plugins
+//= require lightbox
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
