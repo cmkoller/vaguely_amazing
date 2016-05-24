@@ -26,6 +26,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Germania One';
+  src: font-url('GermaniaOne.ttf'); /* IE9 Compat Modes */
+  font-weight: normal;
+  font-style: normal;
+}
+
 // Import Oswald and Droid Sans and Lato
 @import url('//fonts.googleapis.com/css?family=Lato:300|Droid+Sans:400,700|Oswald');
 
